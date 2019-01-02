@@ -1,0 +1,41 @@
+language: node_js
+node_js:
+    - "10"
+env:
+    - CXX=g++-4.8
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-4.8
+# install:
+    # - npm install -g vuepress
+script:
+    - yarn build
+    - yarn docs:build
+cache:
+    directories:
+        - "node_modules"
+notifications:
+    email: false
+before_deploy:
+    - git config --local user.name "Travis CI"
+    - git config --local user.email "github@travis-ci.org"
+    - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+    - git tag $TRAVIS_TAG
+deploy:
+    - provider: releases
+      api_key: $GITHUB_TOKEN
+      file_glob: true
+      file: dist/*
+      skip_cleanup: true
+    - provider: pages
+      skip-cleanup: true
+      local_dir: docs/.vuepress/dist
+      github-token: $GITHUB_TOKEN
+      repo: reno-xjb/v-mapboxgl
+      keep-history: true
+      target-branch: gh-pages
+      on:
+        branch: master

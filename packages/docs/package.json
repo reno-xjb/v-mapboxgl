@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "docs",
+  "description": "docs of VMapboxGL",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "view-info": "vuepress view-info docs",
+    "show-help": "vuepress --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reno-xjb/v-mapboxgl.git"
+  },
+  "keywords": [
+    "documentation",
+    "vue",
+    "mapbox-gl"
+  ],
+  "author": "reno-xjb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reno-xjb/v-mapboxgl/issues"
+  },
+  "homepage": "https://github.com/reno-xjb/v-mapboxgl#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.2"
+  },
+  "dependencies": {
+    "v-mapboxgl": "^0.1.0"
+  }
+}
