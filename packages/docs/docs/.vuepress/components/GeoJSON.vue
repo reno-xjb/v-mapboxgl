@@ -1,5 +1,5 @@
 <template>
-  <v-map-provider
+  <v-map
     :access-token="$mapbox.token"
     map-style="mapbox://styles/mapbox/outdoors-v11"
     :center="[-121.403732, 40.492392]"
@@ -45,7 +45,7 @@
         :filter="['==', '$type', 'Point']",
       />
     </v-geojson-source>
-  </v-map-provider>
+  </v-map>
 </template>
 
 <script>

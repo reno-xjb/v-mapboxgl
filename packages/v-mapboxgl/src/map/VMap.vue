@@ -62,7 +62,7 @@ const mapEvents = [
 ];
 
 @Component({})
-export default class VMapProvider extends Vue {
+export default class VMap extends Vue {
   private loaded: boolean = false;
   private map?: mapboxgl.Map;
 
