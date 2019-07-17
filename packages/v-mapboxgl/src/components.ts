@@ -32,8 +32,8 @@ export { default as VMarker } from './marker/VMarker.vue';
 // POPUP
 export { default as VPopup } from './popup/VPopup.vue';
 
-// PROVIDER
-export { default as VMapProvider } from './provider/VMapProvider.vue';
+// MAP
+export { default as VMap } from './map/VMap.vue';
 
 // SOURCES
 export { default as VCanvasSource } from './sources/VCanvasSource';

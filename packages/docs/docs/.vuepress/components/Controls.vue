@@ -1,5 +1,5 @@
 <template>
-  <v-map-provider
+  <v-map
     :access-token="$mapbox.token"
     :map-style="mapStyle"
     :center="[-119.8138027, 39.5296329]"
@@ -25,7 +25,7 @@
     position="bottom-right"
     />
     <v-scale-control position="bottom-left"/>
-  </v-map-provider>
+  </v-map>
 </template>
 
 <script>
