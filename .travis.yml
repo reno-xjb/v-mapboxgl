@@ -1,0 +1,37 @@
+language: node_js
+node_js:
+    - "10"
+env:
+    - CXX=g++-4.8
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-4.8
+install:
+    - yarn install
+script:
+    - yarn build
+cache:
+    directories:
+        - "node_modules"
+notifications:
+    email: false
+before_deploy: .travis/before_deploy.sh
+after_success: .travis/after_success.sh
+deploy:
+    # - provider: releases
+    #   api_key: $GITHUB_TOKEN
+    #   file_glob: true
+    #   file: dist/*
+    #   skip_cleanup: true
+    - provider: pages
+      skip-cleanup: true
+      local_dir: packages/docs/docs/.vuepress/dist
+      github-token: $GITHUB_TOKEN
+      repo: reno-xjb/v-mapboxgl
+      keep-history: true
+      target-branch: gh-pages
+      on:
+        branch: test
