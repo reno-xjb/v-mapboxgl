@@ -30,9 +30,9 @@
 <script lang='ts'>
   import * as mapboxgl from 'mapbox-gl';
   import { Component, Mixins, Prop, Watch, Inject } from 'vue-property-decorator';
-  import VControlMixin from '@/controls/mixins/vControl';
-  import BasicMapboxControl, { ButtonStyle } from '@/controls/helpers/mapbox/basicControl';
-  import { Corner } from '@/types';
+  import { VControlMixin } from 'v-mapboxgl';
+  import { Corner } from '@v-mapboxgl/types';
+  import { BasicMapboxControl, ButtonStyle } from '@v-mapboxgl/plugin-basic-control';
 
   export interface ControlMenuItem {
     icon: string;

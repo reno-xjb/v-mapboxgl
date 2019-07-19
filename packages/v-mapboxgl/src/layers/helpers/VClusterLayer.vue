@@ -62,7 +62,7 @@ import { Component, Prop, Inject, Mixins, Watch } from 'vue-property-decorator';
 import VSymbolLayer from '@/layers/VSymbolLayer';
 import VCircleLayer from '@/layers/VCircleLayer';
 import VImageLoader from '@/image/VImageLoader.vue';
-import { Images } from '@/types';
+import { Images } from '@v-mapboxgl/types';
 
 @Component({
   components: {

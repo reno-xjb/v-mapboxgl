@@ -4,16 +4,12 @@ import * as mapboxgl from 'mapbox-gl';
 import {
   Position,
   LayerType,
-} from '@/types';
-import {
-  zoomValidator,
-  geojsonLayerTypeValidator,
-} from '@/validators';
+} from '@v-mapboxgl/types';
 import VPopup from '@/popup/VPopup.vue';
 import VLayer from '@/layers/mixins/vLayer';
 import VSourceLayerMixin from '@/layers/mixins/vSourceLayer';
 import '@/layers/mixins/vPopupLayer.css';
-import { resolveCoordinatesToFeature } from '@/utils/geojson';
+import { geojson } from '@v-mapboxgl/utils';
 
 @Component({})
 export default class VPopupLayer extends Mixins(VSourceLayerMixin) {
@@ -34,10 +30,18 @@ export default class VPopupLayer extends Mixins(VSourceLayerMixin) {
   protected clickedFeature: GeoJSON.Feature | null = null;
 
   protected get currentPopupCoordinates(): mapboxgl.LngLat | null {
-    return resolveCoordinatesToFeature({ feature: this.currentFeature, lngLat: this.currentLngLat, accurate: false });
+    return geojson.resolveCoordinatesToFeature({
+      feature: this.currentFeature,
+      lngLat: this.currentLngLat,
+      accurate: false,
+    });
   }
   protected get clickedPopupCoordinates(): mapboxgl.LngLat | null {
-    return resolveCoordinatesToFeature({ feature: this.clickedFeature, lngLat: this.clickedLngLat, accurate: true });
+    return geojson.resolveCoordinatesToFeature({
+      feature: this.clickedFeature,
+      lngLat: this.clickedLngLat,
+      accurate: true,
+    });
   }
 
   protected get portalName(): string {

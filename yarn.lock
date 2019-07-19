@@ -2145,7 +2145,7 @@
     cypress "^3.2.0"
     eslint-plugin-cypress "^2.2.1"
 
-"@vue/cli-plugin-typescript@^3.7.0":
+"@vue/cli-plugin-typescript@^3.7.0", "@vue/cli-plugin-typescript@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-typescript/-/cli-plugin-typescript-3.9.0.tgz#8969f2df898a68b4c1d49f5a928ec9ba35a0c0fe"
   integrity sha512-QXL98MLM2gdqcrLkEG3bjwyQDIhzKdJqUdVghH/ZAttSj5G3hDKklI5HPqz3TJV7FVDOocFr1szP2BcXCCLh8Q==
@@ -10543,6 +10543,10 @@ matcher@^1.0.0:
   integrity sha512-+BmqxWIubKTRKNWx/ahnCkk3mG8m7OturVlqq6HiojGJTd5hVYbgZm6WzcYPCoB+KBT4Vd6R7WSRG2OADNaCjg==
   dependencies:
     escape-string-regexp "^1.0.4"
+
+"material-design-icons@https://github.com/tanskann/material-design-icons#c710d368b0b5ce60e923b3d3d7e48637e75b84cc":
+  version "3.0.1"
+  resolved "https://github.com/tanskann/material-design-icons#c710d368b0b5ce60e923b3d3d7e48637e75b84cc"
 
 math-random@^1.0.1:
   version "1.0.4"

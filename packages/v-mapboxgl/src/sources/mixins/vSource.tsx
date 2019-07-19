@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Component, Provide, Inject, Prop, Watch } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
-import { SourceType } from '@/types';
+import { SourceType } from '@v-mapboxgl/types';
 
 @Component({})
 export default class VSource extends Vue {

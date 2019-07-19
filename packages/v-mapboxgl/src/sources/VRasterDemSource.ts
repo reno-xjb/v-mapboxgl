@@ -4,11 +4,8 @@ import * as mapboxgl from 'mapbox-gl';
 import {
   SourceType,
   Encoding,
-} from '@/types';
-import {
-  zoomValidator,
-  encodingValidator,
-} from '@/validators';
+} from '@v-mapboxgl/types';
+import { validators } from '@v-mapboxgl/utils';
 import VSourceMixin from '@/sources/mixins/vSource';
 
 @Component({})
@@ -21,15 +18,15 @@ export default class VRasterDemSource extends Mixins(VSourceMixin) {
   protected tiles?: string[];
   @Prop(Array)
   protected bounds?: number[];
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected minZoom?: number;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected maxZoom?: number;
   @Prop(Number)
   protected tileSize?: number;
   @Prop(String)
   protected attribution?: boolean;
-  @Prop({ type: String, validator: encodingValidator })
+  @Prop({ type: String, validator: validators.encodingValidator })
   protected encoding?: Encoding;
 
   protected get sourceOptions() {

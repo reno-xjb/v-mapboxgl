@@ -2,7 +2,7 @@ import * as mapboxgl from 'mapbox-gl';
 import Vue from 'vue';
 import { Component, Mixins, Prop, Watch} from 'vue-property-decorator';
 import VControlMixin from '@/controls/mixins/vControl';
-import { UnitSystem } from '@/types';
+import { UnitSystem } from '@v-mapboxgl/types';
 
 @Component({})
 export default class VScaleControl extends Mixins(VControlMixin) {

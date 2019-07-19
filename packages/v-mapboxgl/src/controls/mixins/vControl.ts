@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Component, Prop, Watch, Inject} from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
-import { Corner } from '@/types';
+import { Corner } from '@v-mapboxgl/types';
 
 @Component({})
 export default class VControlMixin extends Vue {

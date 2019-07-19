@@ -1,11 +1,8 @@
 import Vue from 'vue';
 import { Component, Mixins, Prop, Watch } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
-import { SourceType } from '@/types';
-import {
-  zoomValidator,
-  bufferValidator,
-} from '@/validators';
+import { SourceType } from '@v-mapboxgl/types';
+import { validators } from '@v-mapboxgl/utils';
 import VSourceMixin from '@/sources/mixins/vSource';
 
 @Component({})
@@ -14,17 +11,17 @@ export default class VGeojsonSource extends Mixins(VSourceMixin) {
 
   @Prop({ type: [Object, String], required: true })
   protected data!: string | GeoJSON.FeatureCollection | GeoJSON.Feature;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected maxZoom?: number;
   @Prop(String)
   protected attribution?: string;
-  @Prop({ type: Number, validator: bufferValidator })
+  @Prop({ type: Number, validator: validators.bufferValidator })
   protected buffer?: number;
   @Prop(Number)
   protected tolerance?: number;
   @Prop({ type: Boolean, default: false })
   protected cluster!: boolean;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected clusterMaxZoom?: number;
   @Prop(Number)
   protected clusterRadius?: number;

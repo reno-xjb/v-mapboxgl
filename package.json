@@ -1,6 +1,14 @@
 {
-  "private": true,
   "name": "v-mapboxgl",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docs:dev": "yarn workspace docs dev",
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --parallel",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {},
   "devDependencies": {
     "commitizen": "^3.1.1",
     "cz-lerna-changelog": "^2.0.2",
@@ -12,15 +20,16 @@
       "path": "./node_modules/cz-lerna-changelog"
     }
   },
-  "version": "0.0.0-development",
-  "scripts": {
-    "semantic-release": "semantic-release"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/reno-xjb/v-mapboxgl.git"
   },
   "workspaces": [
-    "packages/*"
+    "packages/@v-mapboxgl/types",
+    "packages/@v-mapboxgl/utils",
+    "packages/@v-mapboxgl/plugin-basic-control",
+    "packages/@v-mapboxgl/plugin-menu-control",
+    "packages/v-mapboxgl",
+    "packages/docs"
   ]
 }

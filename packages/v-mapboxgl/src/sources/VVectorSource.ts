@@ -4,11 +4,8 @@ import * as mapboxgl from 'mapbox-gl';
 import {
   SourceType,
   Scheme,
-} from '@/types';
-import {
-  zoomValidator,
-  schemeValidator,
-} from '@/validators';
+} from '@v-mapboxgl/types';
+import { validators } from '@v-mapboxgl/utils';
 import VSourceMixin from '@/sources/mixins/vSource';
 
 @Component({})
@@ -21,11 +18,11 @@ export default class VVectorSource extends Mixins(VSourceMixin) {
   protected tiles?: string[];
   @Prop(Array)
   protected bounds?: number[];
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected minZoom?: number;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected maxZoom?: number;
-  @Prop({ type: String, validator: schemeValidator })
+  @Prop({ type: String, validator: validators.schemeValidator })
   protected scheme?: Scheme;
   @Prop(String)
   protected attribution?: boolean;

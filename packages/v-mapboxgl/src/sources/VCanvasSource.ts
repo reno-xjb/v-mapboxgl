@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import { Component, Mixins, Prop, Watch } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
-import { SourceType } from '@/types';
-import { coordinatesValidator } from '@/validators';
+import { SourceType } from '@v-mapboxgl/types';
+import { validators } from '@v-mapboxgl/utils';
 import VSourceMixin from '@/sources/mixins/vSource';
 
 @Component({})
@@ -12,7 +12,7 @@ export default class VCanvasSource extends Mixins(VSourceMixin) {
 
   @Prop({ type: [String, Object], required: true })
   protected canvas!: string | HTMLCanvasElement;
-  @Prop({ type: Array, validator: coordinatesValidator, required: true })
+  @Prop({ type: Array, validator: validators.coordinatesValidator, required: true })
   protected coordinates!: number[][];
   @Prop({ type: Boolean, default: false })
   protected animate!: boolean;

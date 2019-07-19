@@ -28,6 +28,9 @@
     "vuepress": "^1.0.2"
   },
   "dependencies": {
-    "v-mapboxgl": "^0.1.0"
+    "@v-mapboxgl/plugin-basic-control": "^0.0.0",
+    "@v-mapboxgl/plugin-menu-control": "^0.0.0",
+    "material-design-icons": "https://github.com/tanskann/material-design-icons#c710d368b0b5ce60e923b3d3d7e48637e75b84cc",
+    "v-mapboxgl": "^0.0.0"
   }
 }
