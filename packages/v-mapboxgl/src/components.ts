@@ -5,11 +5,6 @@ export { default as VGeolocateControl } from './controls/VGeolocateControl';
 export { default as VNavigationControl } from './controls/VNavigationControl';
 export { default as VScaleControl } from './controls/VScaleControl';
 
-// CONTROLS HELPERS
-export { default as VMenuControl } from './controls/helpers/VMenuControl.vue';
-export { default as VBasicControl } from './controls/helpers/VBasicControl';
-
-
 // IMAGE
 export { default as VImageLoader } from './image/VImageLoader.vue';
 

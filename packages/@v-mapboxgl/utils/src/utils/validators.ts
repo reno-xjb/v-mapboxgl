@@ -1,4 +1,4 @@
-import { LayerType, Scheme, Encoding } from '@/types';
+import { LayerType, Scheme, Encoding } from '@v-mapboxgl/types';
 
 export function zoomValidator(value: number): boolean {
   return (value >= 0 && value <= 24);

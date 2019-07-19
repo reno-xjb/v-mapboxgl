@@ -1,16 +1,7 @@
 import * as mapboxgl from 'mapbox-gl';
-import noop from '@/utils/noop';
-import { Position } from '@/types';
-
-export interface BasicControlOptions {
-  style?: { [key: string]: any};
-  className?: string;
-  onClick?: any;
-}
-
-export interface ButtonStyle {
-  [key: string]: any;
-}
+import { noop } from '@v-mapboxgl/utils';
+import { Position } from '@v-mapboxgl/types';
+import { BasicControlOptions, ButtonStyle } from './types';
 
 export default class BasicControl {
   private className: string = '';

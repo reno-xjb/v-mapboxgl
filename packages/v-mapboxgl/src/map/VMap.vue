@@ -9,8 +9,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import Vue from 'vue';
 import mapbox, * as mapboxgl from 'mapbox-gl';
 import { Component, Prop, Watch, Provide } from 'vue-property-decorator';
-import { Corner, Viewport } from '@/types';
-import { zoomValidator } from '@/validators';
+import { Corner, Viewport } from '@v-mapboxgl/types';
+import { validators } from '@v-mapboxgl/utils';
 
 const mapEvents = [
   'resize',
@@ -70,9 +70,9 @@ export default class VMap extends Vue {
   private container!: string | HTMLElement;
   @Prop({ type: String, required: true })
   private accessToken!: string;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   private minZoom?: number;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   private maxZoom?: number;
   @Prop({ type: [String, Object] })
   private mapStyle?: string | mapboxgl.Style;
@@ -101,7 +101,7 @@ export default class VMap extends Vue {
   // TODO trackResize
   @Prop([Object, Array])
   private center?: mapboxgl.LngLatLike;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   private zoom?: number;
   // TODO bearing
   // TODO pitch

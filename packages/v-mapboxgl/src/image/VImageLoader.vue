@@ -7,7 +7,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Component, Inject, Prop } from 'vue-property-decorator';
-import { Image, Images } from '@/types';
+import { Image, Images } from '@v-mapboxgl/types';
 
 import * as mapboxgl from 'mapbox-gl';
 

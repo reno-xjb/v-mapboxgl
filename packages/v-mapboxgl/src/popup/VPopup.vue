@@ -7,7 +7,7 @@
 import Vue from 'vue';
 import { Component, Prop, Inject, Watch } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
-import { Position } from '@/types';
+import { Position } from '@v-mapboxgl/types';
 
 @Component({})
 export default class VPopup extends Vue {

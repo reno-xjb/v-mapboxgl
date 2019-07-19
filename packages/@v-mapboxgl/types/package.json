@@ -1,0 +1,10 @@
+{
+  "name": "@v-mapboxgl/types",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/mapbox-gl": "^0.51.6",
+    "mapbox-gl": "^0.54.0"
+  },
+  "typings": "src/index.d.ts"
+}

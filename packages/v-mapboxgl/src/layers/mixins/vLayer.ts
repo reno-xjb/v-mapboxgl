@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Component, Inject, Prop, Watch } from 'vue-property-decorator';
-import { LayerType } from '@/types';
-import { zoomValidator } from '@/validators';
+import { LayerType } from '@v-mapboxgl/types';
+import { validators } from '@v-mapboxgl/utils';
 
 @Component({})
 export default class VLayer extends Vue {
@@ -22,9 +22,9 @@ export default class VLayer extends Vue {
   protected visible!: boolean;
   @Prop({ type: Object, default: () => ({}) })
   protected metadata!: { [key: string]: any };
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected minZoom?: number;
-  @Prop({ type: Number, validator: zoomValidator })
+  @Prop({ type: Number, validator: validators.zoomValidator })
   protected maxZoom?: number;
   @Prop({ type: Object, default: () => ({}) })
   protected layout!: mapboxgl.BackgroundLayout | mapboxgl.FillLayout | mapboxgl.FillExtrusionLayout |

@@ -1,6 +1,11 @@
 {
   "packages": [
-    "packages/*"
+    "packages/@v-mapboxgl/types",
+    "packages/@v-mapboxgl/utils",
+    "packages/@v-mapboxgl/plugin-basic-control",
+    "packages/@v-mapboxgl/plugin-menu-control",
+    "packages/v-mapboxgl",
+    "packages/docs"
   ],
   "version": "0.0.0",
   "npmClient": "yarn",
