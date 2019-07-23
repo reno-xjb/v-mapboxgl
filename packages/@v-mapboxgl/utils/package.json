@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "lint": "vue-cli-service lint",
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@types/mapbox-gl": "^0.51.6",
-    "@v-mapboxgl/types": "^0.0.0",
+    "@v-mapboxgl/types": "^0.0.1",
     "mapbox-gl": "^0.54.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
