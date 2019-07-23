@@ -12,6 +12,7 @@
   ],
   "command": {
     "publish": {
+      "npmClient": "npm",
       "conventionalCommits": true
     },
     "version": {

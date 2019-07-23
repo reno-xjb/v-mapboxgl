@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+.npmrc
 .rpt2_cache
 dist
 

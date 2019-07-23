@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "10"
 install:
-  - yarn install
+  - yarn install --frozen-lockfile
 script:
   - yarn build
 cache:
@@ -15,9 +15,24 @@ before_deploy:
   - git config user.name "Travis CI"
   - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
   - git checkout master
+  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc 2> /dev/null
 deploy:
   - provider: script
     script: yarn release
     skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: yarn npm:publish
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: pages
+    skip-cleanup: true
+    local_dir: packages/docs/docs/.vuepress/dist
+    github-token: $GH_TOKEN
+    repo: reno-xjb/v-mapboxgl
+    keep-history: true
+    target-branch: gh-pages
     on:
       branch: master

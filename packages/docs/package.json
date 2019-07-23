@@ -7,7 +7,8 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "view-info": "vuepress view-info docs",
-    "show-help": "vuepress --help"
+    "show-help": "vuepress --help",
+    "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
   },
   "homepage": "https://github.com/reno-xjb/v-mapboxgl#readme",
   "devDependencies": {
+    "semantic-release": "^15.13.18",
+    "semantic-release-monorepo": "^6.1.1",
     "vuepress": "^1.0.2"
   },
   "dependencies": {

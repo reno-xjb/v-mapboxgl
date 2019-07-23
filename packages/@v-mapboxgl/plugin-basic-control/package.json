@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "lint": "vue-cli-service lint",
-    "build": "bili"
+    "build": "bili",
+    "semantic-release": "semantic-release -e semantic-release-monorepo"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@types/mapbox-gl": "^0.51.6",
@@ -22,6 +26,8 @@
     "bili": "^4.8.0",
     "lint-staged": "^8.1.5",
     "rollup-plugin-typescript2": "^0.22.0",
+    "semantic-release": "^15.13.18",
+    "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.5.21"
   },

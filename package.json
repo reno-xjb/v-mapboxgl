@@ -11,13 +11,12 @@
     "docs": "yarn workspace docs dev",
     "build": "lerna run build --stream",
     "lint": "lerna run lint --parallel",
-    "test": "lerna run test",
+    "test": "lerna run test --parallel",
     "release": "lerna version --conventional-commits --yes",
-    "publish": "lerna publish"
+    "npm:publish": "lerna publish from-package --yes"
   },
   "dependencies": {},
   "devDependencies": {
-    "commitizen": "^3.1.1",
     "lerna": "^3.16.2",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
