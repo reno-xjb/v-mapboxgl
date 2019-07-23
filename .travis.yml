@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "10"
+install:
+  - yarn install
+script:
+  - yarn build
+cache:
+  directories:
+    - "node_modules"
+notifications:
+  email: false
+before_deploy:
+  - git config user.email "travis@travis-ci.org"
+  - git config user.name "Travis CI"
+  - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+  - git checkout master
+deploy:
+  - provider: script
+    script: yarn release
+    skip_cleanup: true
+    on:
+      branch: master

@@ -1,4 +1,7 @@
 {
+  "npmClient": "yarn",
+  "version": "independent",
+  "useWorkspaces": true,
   "packages": [
     "packages/@v-mapboxgl/types",
     "packages/@v-mapboxgl/utils",
@@ -7,7 +10,12 @@
     "packages/v-mapboxgl",
     "packages/docs"
   ],
-  "version": "0.0.0",
-  "npmClient": "yarn",
-  "useWorkspaces": true
+  "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
+    "version": {
+      "message": "chore(release): release [skip ci]"
+    }
+  }
 }

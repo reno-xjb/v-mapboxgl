@@ -1,28 +1,32 @@
 {
-  "name": "v-mapboxgl",
-  "version": "0.0.0",
   "private": true,
+  "name": "v-mapboxgl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reno-xjb/v-mapboxgl.git"
+  },
+  "author": "reno-xjb",
+  "license": "MIT",
   "scripts": {
-    "docs:dev": "yarn workspace docs dev",
+    "docs": "yarn workspace docs dev",
     "build": "lerna run build --stream",
     "lint": "lerna run lint --parallel",
-    "semantic-release": "semantic-release"
+    "test": "lerna run test",
+    "release": "lerna version --conventional-commits --yes",
+    "publish": "lerna publish"
   },
   "dependencies": {},
   "devDependencies": {
     "commitizen": "^3.1.1",
-    "cz-lerna-changelog": "^2.0.2",
-    "lerna": "^3.15.0",
-    "semantic-release": "^15.13.18"
+    "lerna": "^3.16.2",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "cz-conventional-changelog": "^3.0.2"
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-lerna-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/reno-xjb/v-mapboxgl.git"
   },
   "workspaces": [
     "packages/@v-mapboxgl/types",
