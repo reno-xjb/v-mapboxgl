@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { Component, Prop, Mixins } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
 import { LayerType } from '@v-mapboxgl/types';
-import VPopupLayerMixin from '@/layers/mixins/vPopupLayer';
+import VPopupLayerMixin from './mixins/vPopupLayer';
 
 @Component({})
 export default class VFillExtrusionLayer extends Mixins(VPopupLayerMixin) {

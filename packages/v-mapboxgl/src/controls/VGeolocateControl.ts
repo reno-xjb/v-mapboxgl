@@ -1,6 +1,6 @@
 import * as mapboxgl from 'mapbox-gl';
 import { Component, Mixins, Prop, Watch, Emit } from 'vue-property-decorator';
-import VControlMixin from '@/controls/mixins/vControl';
+import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VGeolocateControl extends Mixins(VControlMixin) {

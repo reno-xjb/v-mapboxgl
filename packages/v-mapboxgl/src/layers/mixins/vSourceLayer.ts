@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { Component, Inject, Prop, Watch, Mixins } from 'vue-property-decorator';
-import VLayerMixin from '@/layers/mixins/vLayer';
+import VLayerMixin from './vLayer';
 
 @Component({})
 export default class VSourceLayer extends Mixins(VLayerMixin) {

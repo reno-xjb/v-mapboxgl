@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { Component, Prop, Mixins } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
 import { LayerType } from '@v-mapboxgl/types';
-import VLayerMixin from '@/layers/mixins/vLayer';
+import VLayerMixin from './mixins/vLayer';
 
 @Component({})
 export default class VBackgroundLayer extends Mixins(VLayerMixin) {

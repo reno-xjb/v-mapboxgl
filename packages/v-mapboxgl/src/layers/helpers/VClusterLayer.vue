@@ -59,9 +59,9 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Component, Prop, Inject, Mixins, Watch } from 'vue-property-decorator';
-import VSymbolLayer from '@/layers/VSymbolLayer';
-import VCircleLayer from '@/layers/VCircleLayer';
-import VImageLoader from '@/image/VImageLoader.vue';
+import VSymbolLayer from '../VSymbolLayer';
+import VCircleLayer from '../VCircleLayer';
+import VImageLoader from '../../image/VImageLoader.vue';
 import { Images } from '@v-mapboxgl/types';
 
 @Component({

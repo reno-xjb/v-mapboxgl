@@ -3,7 +3,7 @@ import { Component, Mixins, Prop, Watch } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
 import { SourceType } from '@v-mapboxgl/types';
 import { validators } from '@v-mapboxgl/utils';
-import VSourceMixin from '@/sources/mixins/vSource';
+import VSourceMixin from './mixins/vSource';
 
 @Component({})
 export default class VCanvasSource extends Mixins(VSourceMixin) {

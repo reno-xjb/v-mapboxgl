@@ -33,9 +33,9 @@ import Vue from 'vue';
 import { Component, Watch, Prop, Inject, Provide, Emit } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
 import { noop } from '@v-mapboxgl/utils';
-import VPopup from '@/popup/VPopup.vue';
+import VPopup from '../popup/VPopup.vue';
 import { Position } from '@v-mapboxgl/types';
-import PinImg from '@/assets/arrow_head.png';
+import PinImg from '../assets/arrow_head.png';
 
 @Component({
   components: {

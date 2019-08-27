@@ -62,9 +62,9 @@ import { Component, Mixins, Prop, Inject } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
 import { point as turfPoint } from '@turf/helpers';
 import turfBearing from '@turf/bearing';
-import VLineLayer from '@/layers/VLineLayer';
-import VSymbolLayer from '@/layers/VSymbolLayer';
-import ArrowHead from '@/assets/arrow_head.png';
+import VLineLayer from '../VLineLayer';
+import VSymbolLayer from '../VSymbolLayer';
+import ArrowHead from '../../assets/arrow_head.png';
 
 @Component({})
 export default class VArrowLineLayer extends Mixins(VLineLayer) {

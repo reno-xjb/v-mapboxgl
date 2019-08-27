@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { Component, Prop, Mixins } from 'vue-property-decorator';
 import * as mapboxgl from 'mapbox-gl';
 import { LayerType } from '@v-mapboxgl/types';
-import VSourceLayerMixin from '@/layers/mixins/vSourceLayer';
+import VSourceLayerMixin from './mixins/vSourceLayer';
 
 @Component({})
 export default class VHillshadeLayer extends Mixins(VSourceLayerMixin) {

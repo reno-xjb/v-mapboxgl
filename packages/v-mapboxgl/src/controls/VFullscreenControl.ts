@@ -1,6 +1,6 @@
 import * as mapboxgl from 'mapbox-gl';
 import { Component, Mixins } from 'vue-property-decorator';
-import VControlMixin from '@/controls/mixins/vControl';
+import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VFullscreenControl extends Mixins(VControlMixin) {

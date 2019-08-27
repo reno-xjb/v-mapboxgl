@@ -6,7 +6,7 @@ import {
   Encoding,
 } from '@v-mapboxgl/types';
 import { validators } from '@v-mapboxgl/utils';
-import VSourceMixin from '@/sources/mixins/vSource';
+import VSourceMixin from './mixins/vSource';
 
 @Component({})
 export default class VRasterDemSource extends Mixins(VSourceMixin) {

@@ -5,11 +5,11 @@ import {
   Position,
   LayerType,
 } from '@v-mapboxgl/types';
-import VPopup from '@/popup/VPopup.vue';
-import VLayer from '@/layers/mixins/vLayer';
-import VSourceLayerMixin from '@/layers/mixins/vSourceLayer';
-import '@/layers/mixins/vPopupLayer.css';
 import { geojson } from '@v-mapboxgl/utils';
+import VPopup from '../../popup/VPopup.vue';
+import VLayer from './vLayer';
+import VSourceLayerMixin from './vSourceLayer';
+import './vPopupLayer.css';
 
 @Component({})
 export default class VPopupLayer extends Mixins(VSourceLayerMixin) {
