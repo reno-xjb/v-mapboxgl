@@ -2410,7 +2410,7 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/component-compiler-utils@^2.1.0", "@vue/component-compiler-utils@^2.5.1", "@vue/component-compiler-utils@^2.6.0":
+"@vue/component-compiler-utils@^2.5.1", "@vue/component-compiler-utils@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@vue/component-compiler-utils/-/component-compiler-utils-2.6.0.tgz#aa46d2a6f7647440b0b8932434d22f12371e543b"
   integrity sha512-IHjxt7LsOFYc0DkTncB7OXJL7UzwOLPPQCfEUNyxL2qt+tF12THV+EO33O1G2Uk4feMSWua3iD39Itszx0f0bw==
@@ -2439,17 +2439,6 @@
     prettier "1.16.3"
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
-
-"@vue/component-compiler@^3.6":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@vue/component-compiler/-/component-compiler-3.6.0.tgz#8db313e50eaa2903cef5aac68c37a09364dba79d"
-  integrity sha512-NIA0vmOI4zbtJAn69iZls8IJ8VxmguswAuiUdu8TcR+YYTYzntfw290HUCSFjzAdRg+FUWZv8r+wc3TzJ/IjwA==
-  dependencies:
-    "@vue/component-compiler-utils" "^2.1.0"
-    clean-css "^4.1.11"
-    hash-sum "^1.0.2"
-    postcss-modules-sync "^1.0.0"
-    source-map "0.6.*"
 
 "@vue/component-compiler@^4.0.0":
   version "4.0.0"
@@ -14242,20 +14231,6 @@ rollup-plugin-typescript2@^0.22.0:
     rollup-pluginutils "2.8.1"
     tslib "1.10.0"
 
-rollup-plugin-vue@4.6.2:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-4.6.2.tgz#13ef8c551825f3956f4b43542830f4f6e0a90169"
-  integrity sha512-02Xmcn5bewk0mTQNliRS5/dp1xf0whPtHV/5DAjbsqiFZvRvf5cBDKIpxAWdnOTyxXO/BaT/E9GTxnCOmt4AIQ==
-  dependencies:
-    "@vue/component-compiler" "^3.6"
-    "@vue/component-compiler-utils" "^2.1.0"
-    debug "^4.1.1"
-    hash-sum "^1.0.2"
-    querystring "^0.2.0"
-    rollup-pluginutils "^2.0.1"
-    source-map "0.7.3"
-    vue-runtime-helpers "1.0.0"
-
 rollup-plugin-vue@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-5.0.1.tgz#1d634db033b7c628886c7a84a7d1cd444aafe983"
@@ -16346,11 +16321,6 @@ vue-router@^3.0.2:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.7.tgz#b36ca107b4acb8ff5bc4ff824584059c23fcb87b"
   integrity sha512-utJ+QR3YlIC/6x6xq17UMXeAfxEvXA0VKD3PiSio7hBOZNusA1jXcbxZxVEfJunLp48oonjTepY8ORoIlRx/EQ==
-
-vue-runtime-helpers@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vue-runtime-helpers/-/vue-runtime-helpers-1.0.0.tgz#af5fe1c8d727beb680b2eb9d791c8e022342e54d"
-  integrity sha512-DgwCNgIXkq1GJsWwtFOjA/K2nxpjyon/QqAut0EiwrMHBatAPbfdqksDdRoK15b5YrSJRa59rx3pc0L6V4udUA==
 
 vue-runtime-helpers@1.0.1:
   version "1.0.1"
