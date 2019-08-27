@@ -30,7 +30,7 @@ deploy:
   - provider: pages
     skip-cleanup: true
     local_dir: packages/docs/docs/.vuepress/dist
-    github-token: $GH_TOKEN
+    github-token: $GITHUB_TOKEN
     repo: reno-xjb/v-mapboxgl
     keep-history: true
     target-branch: gh-pages
