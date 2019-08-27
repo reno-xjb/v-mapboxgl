@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
