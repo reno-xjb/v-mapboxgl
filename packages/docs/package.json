@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "name": "docs",
   "description": "docs of VMapboxGL",
   "scripts": {
@@ -31,9 +31,9 @@
     "vuepress": "^1.0.2"
   },
   "dependencies": {
-    "@v-mapboxgl/plugin-basic-control": "^0.0.3",
-    "@v-mapboxgl/plugin-menu-control": "^0.0.3",
+    "@v-mapboxgl/plugin-basic-control": "^0.0.4",
+    "@v-mapboxgl/plugin-menu-control": "^0.0.4",
     "material-design-icons": "https://github.com/tanskann/material-design-icons#c710d368b0b5ce60e923b3d3d7e48637e75b84cc",
-    "v-mapboxgl": "^0.1.2"
+    "v-mapboxgl": "^0.1.3"
   }
 }

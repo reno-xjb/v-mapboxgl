@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.2...v-mapboxgl@0.1.3) (2019-08-27)
+
+
+### Bug Fixes
+
+* remove '@' alias as they're not resolved in ts declaration ([56a8b37](https://github.com/reno-xjb/v-mapboxgl/commit/56a8b37))
+
+
+
+
+
 ## [0.1.2](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.1...v-mapboxgl@0.1.2) (2019-08-27)
 
 **Note:** Version bump only for package v-mapboxgl

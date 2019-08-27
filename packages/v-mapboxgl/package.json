@@ -1,6 +1,6 @@
 {
   "name": "v-mapboxgl",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "tsc": "tsc",
     "serve": "vue-cli-service serve",
