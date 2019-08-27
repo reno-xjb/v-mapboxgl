@@ -1,7 +1,6 @@
 {
   "name": "@v-mapboxgl/utils",
   "version": "0.0.2",
-  "private": true,
   "scripts": {
     "lint": "vue-cli-service lint",
     "build": "bili",
