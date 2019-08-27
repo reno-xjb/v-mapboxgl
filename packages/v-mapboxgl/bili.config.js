@@ -21,7 +21,6 @@ module.exports = {
     output: {
         format: ['cjs', 'esm'],
         moduleName: 'VMapboxGL',
-        extractCSS: false,
     },
     target: 'browser',
     banner: true,
