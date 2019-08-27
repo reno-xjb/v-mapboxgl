@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GeoJSON | VMapboxGL</title>
+    <meta name="description" content="A vue.js wrapper for MapboxGL">
+    
+    
+    <link rel="preload" href="/v-mapboxgl/assets/css/0.styles.873019b0.css" as="style"><link rel="preload" href="/v-mapboxgl/assets/js/app.66ad3310.js" as="script"><link rel="preload" href="/v-mapboxgl/assets/js/3.dd08e51d.js" as="script"><link rel="preload" href="/v-mapboxgl/assets/js/13.20ff7faf.js" as="script"><link rel="preload" href="/v-mapboxgl/assets/js/5.dffd536b.js" as="script"><link rel="prefetch" href="/v-mapboxgl/assets/js/1.72c845a5.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/10.b3a140f8.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/11.213aa193.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/12.8b0be29f.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/14.b7ca6780.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/15.f5f4d404.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/16.6e4d704f.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/17.6a5d6075.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/18.de5178fd.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/19.92f74b8f.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/20.8c731357.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/21.09a4af1d.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/22.4084d03c.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/4.33912202.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/6.453c9640.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/7.e2ab7885.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/8.4436bae1.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/9.a85d47ba.js">
+    <link rel="stylesheet" href="/v-mapboxgl/assets/css/0.styles.873019b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/v-mapboxgl/" class="home-link router-link-active"><!----> <span class="site-name">VMapboxGL</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/v-mapboxgl/" class="nav-link">Home</a></div><div class="nav-item"><a href="/v-mapboxgl/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/v-mapboxgl/examples/" class="nav-link router-link-active">Examples</a></div> <a href="https://github.com/reno-xjb/v-mapboxgl" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/v-mapboxgl/" class="nav-link">Home</a></div><div class="nav-item"><a href="/v-mapboxgl/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/v-mapboxgl/examples/" class="nav-link router-link-active">Examples</a></div> <a href="https://github.com/reno-xjb/v-mapboxgl" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Examples</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/v-mapboxgl/examples/controls.html" class="sidebar-link">Controls</a></li><li><a href="/v-mapboxgl/examples/geojson.html" class="active sidebar-link">GeoJSON</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Plugins</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/v-mapboxgl/examples/plugins/basic-control.html" class="sidebar-link">BasicControl</a></li><li><a href="/v-mapboxgl/examples/plugins/menu-control.html" class="sidebar-link">MenuControl</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="geojson"><a href="#geojson" aria-hidden="true" class="header-anchor">#</a> GeoJSON</h1> <div class="v-mapboxgl-docs-container"><!----></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-map</span>
+    <span class="token attr-name">:access-token</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$mapbox.token<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">map-</span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">mapbox</span><span class="token punctuation">:</span>//styles/mapbox/outdoors-v11</span><span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>[-121.403732, 40.492392]<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>10<span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-geojson-source</span>
+      <span class="token attr-name">source-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>parks<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>data<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-fill-layer</span>
+        <span class="token attr-name">layer-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>shapes<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:paint</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{
+          'fill-color': '#888888',
+          'fill-opacity': 0.4,
+        }<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:filter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>['!=', '$type', 'Point']<span class="token punctuation">&quot;</span></span><span class="token attr-name">,</span>
+      <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-circle-layer</span>
+        <span class="token attr-name">layer-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>points<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:paint</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{
+          'circle-color': '#b42222',
+          'circle-radius': 6,
+        }<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:filter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>['==', '$type', 'Point']<span class="token punctuation">&quot;</span></span><span class="token attr-name">,</span>
+      <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-line-layer</span>
+        <span class="token attr-name">layer-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>border<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:paint</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{
+          'line-color': '#888888',
+          'line-width': 4,
+        }<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:filter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>['!=', '$type', 'Point']<span class="token punctuation">&quot;</span></span><span class="token attr-name">,</span>
+      <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-symbol-layer</span>
+        <span class="token attr-name">layer-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>symbol<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:layout</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{
+          'icon-image': 'marker-15',
+          'icon-anchor': 'center',
+          'text-field': '{label}',
+          'text-size': 12,
+          'text-anchor': 'bottom',
+        }<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:filter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>['==', '$type', 'Point']<span class="token punctuation">&quot;</span></span><span class="token attr-name">,</span>
+      <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-geojson-source</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-map</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;FeatureCollection&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;features&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Feature&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;geometry&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Polygon&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;coordinates&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">[</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.353637</span><span class="token punctuation">,</span> <span class="token number">40.584978</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.284551</span><span class="token punctuation">,</span> <span class="token number">40.584758</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.275349</span><span class="token punctuation">,</span> <span class="token number">40.541646</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.246768</span><span class="token punctuation">,</span> <span class="token number">40.541017</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.251343</span><span class="token punctuation">,</span> <span class="token number">40.423383</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.326870</span><span class="token punctuation">,</span> <span class="token number">40.423768</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.360619</span><span class="token punctuation">,</span> <span class="token number">40.434790</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.363694</span><span class="token punctuation">,</span> <span class="token number">40.409124</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.439713</span><span class="token punctuation">,</span> <span class="token number">40.409197</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.439711</span><span class="token punctuation">,</span> <span class="token number">40.423791</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.572133</span><span class="token punctuation">,</span> <span class="token number">40.423548</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.577415</span><span class="token punctuation">,</span> <span class="token number">40.550766</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.539486</span><span class="token punctuation">,</span> <span class="token number">40.558107</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.520284</span><span class="token punctuation">,</span> <span class="token number">40.572459</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.487219</span><span class="token punctuation">,</span> <span class="token number">40.550822</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.446951</span><span class="token punctuation">,</span> <span class="token number">40.563190</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.370644</span><span class="token punctuation">,</span> <span class="token number">40.563267</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.353637</span><span class="token punctuation">,</span> <span class="token number">40.584978</span><span class="token punctuation">]</span>
+              <span class="token punctuation">]</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Feature&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;geometry&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Point&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;coordinates&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.415061</span><span class="token punctuation">,</span> <span class="token number">40.506229</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            label<span class="token punctuation">:</span> <span class="token string">'Awesome Place'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Feature&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;geometry&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Point&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;coordinates&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.505184</span><span class="token punctuation">,</span> <span class="token number">40.488084</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            label<span class="token punctuation">:</span> <span class="token string">'Wonderful Place'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Feature&quot;</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;geometry&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;type&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Point&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;coordinates&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">121.354465</span><span class="token punctuation">,</span> <span class="token number">40.488737</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            label<span class="token punctuation">:</span> <span class="token string">'Fantastic Place'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/reno-xjb/v-mapboxgl/edit/master/docs/examples/geojson.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/23/2019, 8:27:25 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/v-mapboxgl/examples/controls.html" class="prev">
+          Controls
+        </a></span> <span class="next"><a href="/v-mapboxgl/examples/plugins/basic-control.html">
+          BasicControl
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/v-mapboxgl/assets/js/app.66ad3310.js" defer></script><script src="/v-mapboxgl/assets/js/3.dd08e51d.js" defer></script><script src="/v-mapboxgl/assets/js/13.20ff7faf.js" defer></script><script src="/v-mapboxgl/assets/js/5.dffd536b.js" defer></script>
+  </body>
+</html>

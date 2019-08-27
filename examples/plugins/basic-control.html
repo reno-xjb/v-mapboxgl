@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BasicControl | VMapboxGL</title>
+    <meta name="description" content="A vue.js wrapper for MapboxGL">
+    
+    
+    <link rel="preload" href="/v-mapboxgl/assets/css/0.styles.873019b0.css" as="style"><link rel="preload" href="/v-mapboxgl/assets/js/app.66ad3310.js" as="script"><link rel="preload" href="/v-mapboxgl/assets/js/3.dd08e51d.js" as="script"><link rel="preload" href="/v-mapboxgl/assets/js/15.f5f4d404.js" as="script"><link rel="preload" href="/v-mapboxgl/assets/js/5.dffd536b.js" as="script"><link rel="prefetch" href="/v-mapboxgl/assets/js/1.72c845a5.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/10.b3a140f8.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/11.213aa193.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/12.8b0be29f.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/13.20ff7faf.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/14.b7ca6780.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/16.6e4d704f.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/17.6a5d6075.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/18.de5178fd.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/19.92f74b8f.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/20.8c731357.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/21.09a4af1d.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/22.4084d03c.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/4.33912202.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/6.453c9640.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/7.e2ab7885.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/8.4436bae1.js"><link rel="prefetch" href="/v-mapboxgl/assets/js/9.a85d47ba.js">
+    <link rel="stylesheet" href="/v-mapboxgl/assets/css/0.styles.873019b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/v-mapboxgl/" class="home-link router-link-active"><!----> <span class="site-name">VMapboxGL</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/v-mapboxgl/" class="nav-link">Home</a></div><div class="nav-item"><a href="/v-mapboxgl/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/v-mapboxgl/examples/" class="nav-link router-link-active">Examples</a></div> <a href="https://github.com/reno-xjb/v-mapboxgl" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/v-mapboxgl/" class="nav-link">Home</a></div><div class="nav-item"><a href="/v-mapboxgl/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/v-mapboxgl/examples/" class="nav-link router-link-active">Examples</a></div> <a href="https://github.com/reno-xjb/v-mapboxgl" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Examples</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/v-mapboxgl/examples/controls.html" class="sidebar-link">Controls</a></li><li><a href="/v-mapboxgl/examples/geojson.html" class="sidebar-link">GeoJSON</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Plugins</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/v-mapboxgl/examples/plugins/basic-control.html" class="active sidebar-link">BasicControl</a></li><li><a href="/v-mapboxgl/examples/plugins/menu-control.html" class="sidebar-link">MenuControl</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="basiccontrol"><a href="#basiccontrol" aria-hidden="true" class="header-anchor">#</a> BasicControl</h1> <div class="v-mapboxgl-docs-container"><!----></div> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-map</span>
+    <span class="token attr-name">:access-token</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$mapbox.token<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">map-</span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">mapbox</span><span class="token punctuation">:</span>//styles/mapbox/light-v9</span><span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:center</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>[-119.8138027, 39.5296329]<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:zoom</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>12<span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>v-basic-control</span>
+      <span class="token attr-name">:control-class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>className<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>updateClassName<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>v-map</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.basic-control-icon</span> <span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url('~material-design-icons/action/1x_web/ic_done_black_36dp.png')</span><span class="token punctuation">;</span>
+  <span class="token property">background-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.basic-control-icon.toggled</span> <span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url('~material-design-icons/action/1x_web/ic_done_all_black_36dp.png')</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      toggled<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">className</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>toggled <span class="token operator">?</span> <span class="token string">'basic-control-icon toggled'</span> <span class="token punctuation">:</span> <span class="token string">'basic-control-icon'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">updateBackground</span><span class="token punctuation">(</span><span class="token parameter">background</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>background <span class="token operator">=</span> background<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">updateClassName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>toggled <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>toggled<span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'toggled'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>toggled<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/reno-xjb/v-mapboxgl/edit/master/docs/examples/plugins/basic-control.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/23/2019, 8:27:25 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/v-mapboxgl/examples/geojson.html" class="prev">
+          GeoJSON
+        </a></span> <span class="next"><a href="/v-mapboxgl/examples/plugins/menu-control.html">
+          MenuControl
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/v-mapboxgl/assets/js/app.66ad3310.js" defer></script><script src="/v-mapboxgl/assets/js/3.dd08e51d.js" defer></script><script src="/v-mapboxgl/assets/js/15.f5f4d404.js" defer></script><script src="/v-mapboxgl/assets/js/5.dffd536b.js" defer></script>
+  </body>
+</html>
