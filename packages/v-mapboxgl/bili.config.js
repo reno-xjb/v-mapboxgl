@@ -2,6 +2,9 @@ const path = require('path');
 
 module.exports = {
     plugins: {
+        postcss: {
+          inject: false,
+        },
         typescript2: {
             tsconfigOverride: {
                 include: ['src'],
