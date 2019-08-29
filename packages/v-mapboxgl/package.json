@@ -41,6 +41,7 @@
     "lint-staged": "^8.1.5",
     "node-sass": "^4.9.0",
     "rollup-plugin-alias": "^1.5.2",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.22.0",

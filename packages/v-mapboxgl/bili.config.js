@@ -10,6 +10,7 @@ module.exports = {
                 include: ['src'],
             },
         },
+        commonjs: true,
         vue: true,
         img: true,
         alias: {
