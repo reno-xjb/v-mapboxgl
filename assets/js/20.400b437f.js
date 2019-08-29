@@ -1,6 +1,6 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[20],{63:function(t,e,o){"use strict";o.r(e),o.d(e,"BasicMapboxControl",function(){return m}),o.d(e,"VBasicControl",function(){return St});var i=o(33),r=o.n(i),n=o(31),a=o.n(n),c=o(30),u=o(35),s=o(0),p=o(32),l=o.n(p);o(34);
 /*!
- * @v-mapboxgl/plugin-basic-control v0.0.6
+ * @v-mapboxgl/plugin-basic-control v0.0.7
  * (c) 
  */
 function d(t){return(d="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function h(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function b(t,e){for(var o=0;o<e.length;o++){var i=e[o];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(t,i.key,i)}}function y(t,e,o){return e&&b(t.prototype,e),o&&b(t,o),t}function O(t){return(O=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}function v(t,e){return(v=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function f(t,e){return!e||"object"!=typeof e&&"function"!=typeof e?function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t):e}
