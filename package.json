@@ -27,6 +27,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "postcss": {},
   "workspaces": [
     "packages/@v-mapboxgl/types",
     "packages/@v-mapboxgl/utils",

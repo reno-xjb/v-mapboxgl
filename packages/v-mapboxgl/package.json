@@ -5,9 +5,7 @@
     "tsc": "tsc",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "build": "bili",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit",
+    "build": "vue-cli-service build --target lib --myname v-mapboxgl ./src/index.ts && tsc --emitDeclarationOnly",
     "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
   "publishConfig": {
@@ -27,30 +25,21 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@types/jest": "^23.1.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-e2e-cypress": "^3.7.0",
     "@vue/cli-plugin-typescript": "^3.7.0",
-    "@vue/cli-plugin-unit-jest": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
-    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-cli": "^6.26.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.7.0",
     "bili": "^4.8.0",
     "lint-staged": "^8.1.5",
-    "node-sass": "^4.9.0",
-    "rollup-plugin-alias": "^1.5.2",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-img": "^1.1.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.22.0",
-    "rollup-plugin-vue": "^5.0.1",
-    "sass-loader": "^7.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
-    "ts-jest": "^23.0.0",
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.5.21"
   },
@@ -67,7 +56,6 @@
       "git add"
     ]
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/v-mapboxgl.common.js",
   "types": "dist/index.d.ts"
 }

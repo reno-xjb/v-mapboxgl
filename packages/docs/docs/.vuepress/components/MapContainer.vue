@@ -15,11 +15,11 @@ export default {
       return;
     }
     const VMapboxGL = await import('v-mapboxgl');
-    const VMapboxGLBasicControl = await import('@v-mapboxgl/plugin-basic-control');
-    const VMapboxGLMenuControl = await import('@v-mapboxgl/plugin-menu-control');
+    // const VMapboxGLBasicControl = await import('@v-mapboxgl/plugin-basic-control');
+    // const VMapboxGLMenuControl = await import('@v-mapboxgl/plugin-menu-control');
     Vue.use(VMapboxGL.default);
-    Vue.use(VMapboxGLBasicControl.default);
-    Vue.use(VMapboxGLMenuControl.default);
+    // Vue.use(VMapboxGLBasicControl.default);
+    // Vue.use(VMapboxGLMenuControl.default);
     this.$set(this.$mapbox, 'ready', true);
     this.$forceUpdate();
   },

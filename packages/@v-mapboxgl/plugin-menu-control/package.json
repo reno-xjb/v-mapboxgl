@@ -3,7 +3,7 @@
   "version": "0.0.9",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "build": "bili",
+    "old:build": "bili",
     "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
   "publishConfig": {
