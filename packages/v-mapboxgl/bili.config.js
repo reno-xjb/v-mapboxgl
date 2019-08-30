@@ -1,28 +1,36 @@
 const path = require('path');
 
 module.exports = {
-    plugins: {
-        postcss: {
-          inject: false,
-        },
-        typescript2: {
-            tsconfigOverride: {
-                include: ['src'],
-            },
-        },
-        commonjs: true,
-        vue: true,
-        img: true,
-        alias: {
-            '@': path.join(__dirname, 'src'),
-            resolve: ['', '.js', '.js', '.ts', '.tsx', '.vue'],
-        }
+  plugins: {
+    alias: {
+      '@': path.join(__dirname, 'src'),
+      resolve: ['', '.js', '.js', '.ts', '.tsx', '.vue'],
     },
-    input: 'src/index.ts',
-    output: {
-        format: ['cjs', 'esm'],
-        moduleName: 'VMapboxGL',
+    commonjs: true,
+    vue: {
+      css: false,
+      compileTemplate: true,
     },
-    target: 'browser',
-    banner: true,
+    typescript2: {
+      tsconfigOverride: {
+        include: ['src'],
+      },
+    },
+    img: true,
+  },
+  input: 'src/index.ts',
+  output: {
+    format: ['cjs', 'esm'],
+    name: 'VMapboxGL',
+    moduleName: 'VMapboxGL',
+    exports: 'named',
+    globals: {
+      vue: 'Vue',
+      'mapbox-gl': 'mapboxgl',
+    },
+    extractCSS: true,
+  },
+  target: 'browser',
+  banner: true,
+  external: ['vue', 'mapbox-gl']
 };
