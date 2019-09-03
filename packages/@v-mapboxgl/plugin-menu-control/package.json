@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/plugin-menu-control",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "lint": "vue-cli-service lint",
     "old:build": "bili",
@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@types/mapbox-gl": "^0.51.6",
-    "@v-mapboxgl/plugin-basic-control": "^0.0.9",
+    "@v-mapboxgl/plugin-basic-control": "^0.0.10",
     "@v-mapboxgl/types": "^0.0.3",
     "mapbox-gl": "^0.54.0",
-    "v-mapboxgl": "^0.1.8",
+    "v-mapboxgl": "^0.1.9",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0"

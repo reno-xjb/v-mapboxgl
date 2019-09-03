@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.1.8",
+  "version": "0.1.9",
   "name": "docs",
   "description": "docs of VMapboxGL",
   "scripts": {
@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "material-design-icons": "https://github.com/tanskann/material-design-icons#c710d368b0b5ce60e923b3d3d7e48637e75b84cc",
-    "v-mapboxgl": "^0.1.8"
+    "v-mapboxgl": "^0.1.9"
   }
 }
