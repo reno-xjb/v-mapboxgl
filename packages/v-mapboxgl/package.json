@@ -5,18 +5,16 @@
     "tsc": "tsc",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build --target lib --myname v-mapboxgl ./src/index.ts && tsc --emitDeclarationOnly",
+    "build": "vue-cli-service build --target lib --name v-mapboxgl --filename index ./src/index.ts && tsc --emitDeclarationOnly",
     "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@turf/nearest-point-on-line": "^6.0.2",
     "@types/mapbox-gl": "^0.51.6",
     "@v-mapboxgl/types": "^0.0.3",
     "@v-mapboxgl/utils": "^0.0.3",
-    "core-js": "^2.6.5",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0"
   },
@@ -34,13 +32,14 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.7.0",
-    "bili": "^4.8.0",
     "lint-staged": "^8.1.5",
+    "mapbox-gl": "^0.54.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   },
   "gitHooks": {
@@ -56,6 +55,6 @@
       "git add"
     ]
   },
-  "main": "dist/v-mapboxgl.common.js",
+  "main": "dist/index.common.js",
   "types": "dist/index.d.ts"
 }

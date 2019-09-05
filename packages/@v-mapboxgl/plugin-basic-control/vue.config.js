@@ -6,8 +6,9 @@ module.exports = {
     },
     externals: {
       'mapbox-gl': 'mapbox-gl',
-      vue: 'vue',
-    }
+      'v-mapboxgl': 'v-mapboxgl',
+      'vue': 'vue',
+    },
   },
   css: {
     extract: false,

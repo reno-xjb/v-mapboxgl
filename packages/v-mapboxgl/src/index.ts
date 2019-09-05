@@ -1,3 +1,4 @@
+/// <reference path="shims/shims-tsx.d.ts" />
 import Vue, { VueConstructor } from 'vue';
 
 import * as components from './components';

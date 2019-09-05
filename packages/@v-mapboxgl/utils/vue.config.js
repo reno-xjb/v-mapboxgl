@@ -2,14 +2,11 @@ module.exports = {
   productionSourceMap: false,
   configureWebpack: {
     output: {
-      libraryExport: 'default'
+      libraryTarget: 'commonjs2',
     },
     externals: {
       'mapbox-gl': 'mapbox-gl',
-      vue: 'vue',
-    }
-  },
-  css: {
-    extract: false,
+      'vue': 'vue',
+    },
   },
 };

@@ -3,7 +3,7 @@
   "version": "0.0.10",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "old:build": "bili",
+    "build": "vue-cli-service build --target lib --name v-mapboxgl-plugin-basic-control --filename index ./src/index.ts && tsc --emitDeclarationOnly",
     "semantic-release": "semantic-release -e semantic-release-monorepo"
   },
   "publishConfig": {
@@ -13,21 +13,26 @@
     "@types/mapbox-gl": "^0.51.6",
     "@v-mapboxgl/types": "^0.0.3",
     "@v-mapboxgl/utils": "^0.0.3",
-    "mapbox-gl": "^0.54.0",
-    "v-mapboxgl": "^0.1.9",
-    "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0"
+  },
+  "peerDependencies": {
+    "mapbox-gl": "^0.54.0",
+    "v-mapboxgl": "^0.1.8",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-typescript": "^3.9.0",
     "@vue/cli-service": "^3.7.0",
     "bili": "^4.8.0",
+    "mapbox-gl": "^0.54.0",
     "lint-staged": "^8.1.5",
     "rollup-plugin-typescript2": "^0.22.0",
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
+    "v-mapboxgl": "^0.1.8",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   },
   "gitHooks": {
@@ -43,7 +48,6 @@
       "git add"
     ]
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.common.js",
   "types": "dist/index.d.ts"
 }
