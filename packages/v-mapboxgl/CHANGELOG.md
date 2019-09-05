@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.9...v-mapboxgl@0.1.10) (2019-09-05)
+
+**Note:** Version bump only for package v-mapboxgl
+
+
+
+
+
 ## [0.1.9](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.8...v-mapboxgl@0.1.9) (2019-09-03)
 
 **Note:** Version bump only for package v-mapboxgl

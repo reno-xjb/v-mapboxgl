@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --formats commonjs --name v-mapboxgl-plugin-basic-control --filename index ./src/index.ts && tsc --emitDeclarationOnly",
@@ -25,13 +25,13 @@
     "@vue/cli-service": "^3.7.0",
     "bili": "^4.8.0",
     "lint-staged": "^8.1.5",
+    "mapbox-gl": "^0.54.0",
     "rollup-plugin-alias": "^1.5.2",
     "rollup-plugin-typescript2": "^0.22.0",
     "rollup-plugin-vue": "^5.0.1",
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
-    "mapbox-gl": "^0.54.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   },
