@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{54:function(t,e,n){"use strict";n.r(e);var s=n(1),a=Object(s.a)({},function(){var t=this.$createElement;return(this._self._c||t)("v-map",{attrs:{"access-token":this.$mapbox.token,"map-style":"mapbox://styles/mapbox/light-v9",center:[-119.8138027,39.5296329],zoom:12}})},[],!1,null,null,null);e.default=a.exports}}]);
