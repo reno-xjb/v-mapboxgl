@@ -2169,6 +2169,39 @@
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.14.0.tgz#8edfc5f8e6eae20eeed3ca0d02974ed4ee5e4efc"
   integrity sha512-Fv+0gYJzE/czLoRKq+gnXWr4yBpPM3tO3C8pDLFwqVKlMICQUq5OsxwwFZYDaVr7+L6mgNDp16iOcJHEz3J5RQ==
 
+"@v-mapboxgl/plugin-basic-control@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@v-mapboxgl/plugin-basic-control/-/plugin-basic-control-0.0.11.tgz#906a24f36a3d80c1309c1cbb6142d45141159d39"
+  integrity sha512-nhBdE5poEDrDBXX7/cjaKtBVugnH3Y/Ktlvs+M4hA9M9B9E2Idmwt4HwmNABVxNNJrg/+gp40yutCuIR2Uo9eg==
+  dependencies:
+    "@types/mapbox-gl" "^0.51.6"
+    "@v-mapboxgl/types" "^0.0.3"
+    "@v-mapboxgl/utils" "^0.0.4"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.1.0"
+
+"@v-mapboxgl/plugin-menu-control@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@v-mapboxgl/plugin-menu-control/-/plugin-menu-control-0.0.11.tgz#90651a25b36e65a909aa938f00b32dcec3d61c0d"
+  integrity sha512-ooThPXze85ljpt7I4t+6NxQH5cpHeF0sEmVx+vszgnW3q71kwqS3AaCe4qRdpi0tgYqQdQIjicmNbTi2H4P7MA==
+  dependencies:
+    "@types/mapbox-gl" "^0.51.6"
+    "@v-mapboxgl/plugin-basic-control" "^0.0.11"
+    "@v-mapboxgl/types" "^0.0.3"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.1.0"
+
+"@v-mapboxgl/utils@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@v-mapboxgl/utils/-/utils-0.0.4.tgz#9119476bd63e1c77b3b7a2901cb58d2af21618d2"
+  integrity sha512-52NvsQD2ShEySY2idbzojhsD8R6l/fAxgZ+meavJiZ+Xb/qjrWZmDC+S0tTM0idfVjdqLXNfEiVMB0NtlZCfGw==
+  dependencies:
+    "@turf/nearest-point-on-line" "^6.0.2"
+    "@types/mapbox-gl" "^0.51.6"
+    "@v-mapboxgl/types" "^0.0.3"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.1.0"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"
