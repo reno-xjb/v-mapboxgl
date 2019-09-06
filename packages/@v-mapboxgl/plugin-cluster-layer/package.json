@@ -1,0 +1,55 @@
+{
+  "name": "@v-mapboxgl/plugin-cluster-layer",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "build": "vue-cli-service build --target lib --name v-mapboxgl-plugin-cluster-layer --filename index ./src/index.ts && tsc --emitDeclarationOnly",
+    "semantic-release": "semantic-release -e semantic-release-monorepo"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@turf/bearing": "^6.0.1",
+    "@turf/helpers": "^6.1.4",
+    "@types/mapbox-gl": "^0.51.6",
+    "@v-mapboxgl/types": "^0.0.3",
+    "@v-mapboxgl/utils": "^0.0.4",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0"
+  },
+  "peerDependencies": {
+    "mapbox-gl": "^0.54.0",
+    "v-mapboxgl": "^0.1.8",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-typescript": "^3.9.0",
+    "@vue/cli-service": "^3.7.0",
+    "bili": "^4.8.0",
+    "lint-staged": "^8.1.5",
+    "mapbox-gl": "^0.54.0",
+    "rollup-plugin-typescript2": "^0.22.0",
+    "semantic-release": "^15.13.18",
+    "semantic-release-monorepo": "^6.1.1",
+    "typescript": "^3.5.3",
+    "v-mapboxgl": "^0.1.10",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "main": "dist/index.common.js",
+  "types": "dist/index.d.ts"
+}

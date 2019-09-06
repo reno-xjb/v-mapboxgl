@@ -4,7 +4,7 @@
       <div ref="marker" @click="click" @mouseover="openPopup" @mouseout="closePopup">
         <!-- slot for custom marker -->
         <slot v-if="marker" name="marker">
-          <div class="marker" :style="`background-image: url(${pinImg})`"/>
+          <div class="marker" />
         </slot>
       </div>
     </div>
@@ -35,7 +35,6 @@ import * as mapboxgl from 'mapbox-gl';
 import { noop } from '@v-mapboxgl/utils';
 import VPopup from '../popup/VPopup.vue';
 import { Position } from '@v-mapboxgl/types';
-import PinImg from '../assets/arrow_head.png';
 
 @Component({
   components: {
@@ -69,8 +68,6 @@ export default class VMarker extends Vue {
   private popupInitiallyOpened!: boolean;
   @Prop({ type: Boolean, default: true })
   private popupCloseOnMapClick!: boolean;
-
-  private pinImg = PinImg;
 
   @Emit('dragstart')
   private dragstart(coordinates: mapboxgl.LngLatLike) {
@@ -195,14 +192,18 @@ export default class VMarker extends Vue {
 
 <style>
 .marker {
-  background-size: 25px;
-  width: 25px;
-  height: 30px;
+  /* background-size: 25px; */
+  /* width: 25px; */
+  /* height: 30px; */
   display: block;
   box-sizing: border-box;
   outline: none;
   border: 0;
   padding: 0;
   cursor: pointer;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  color: black;
 }
 </style>
