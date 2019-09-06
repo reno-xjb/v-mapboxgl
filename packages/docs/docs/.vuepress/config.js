@@ -44,6 +44,7 @@ module.exports = {
           children: [
             'plugins/basic-control',
             'plugins/menu-control',
+            'plugins/cluster-layer',
           ],
         },
       ],
