@@ -5,7 +5,7 @@ import { LayerType } from '@v-mapboxgl/types';
 import VPopupLayerMixin from './mixins/vPopupLayer';
 
 @Component({})
-export default class VLineBasedLayer extends Mixins(VPopupLayerMixin) {
+export default class VLineLayer extends Mixins(VPopupLayerMixin) {
   protected type: LayerType = 'line';
 
   @Prop({ type: Object, default: () => ({}) })

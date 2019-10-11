@@ -5,7 +5,7 @@ import { LayerType } from '@v-mapboxgl/types';
 import VPopupLayerMixin from './mixins/vPopupLayer';
 
 @Component({})
-export default class VCircleLayer extends Mixins(VPopupLayerMixin) {
+export default class VSymbolLayer extends Mixins(VPopupLayerMixin) {
   protected type: LayerType = 'symbol';
 
   @Prop({ type: Object, default: () => ({}) })
