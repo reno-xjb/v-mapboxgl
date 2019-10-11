@@ -15,10 +15,10 @@
       @mouseout="onMouseOut"
       @mousemove="onMouseMove"
     >
-      <div v-if="$scopedSlots.popup" slot="popup" slot-scope="{ feature }">
+      <div v-if="$scopedSlots.popup" v-slot:popup="{ feature }">
         <slot name="popup" :feature="feature" />
       </div>
-      <div v-if="$scopedSlots.details" slot="details" slot-scope="{ feature }">
+      <div v-if="$scopedSlots.details" v-slot:details="{ feature }">
         <slot name="details" :feature="feature" />
       </div>
     </v-symbol-layer>
