@@ -110,6 +110,12 @@ export default class VLayer extends Vue {
       layout: this.layout,
       paint: this.paint,
     };
+    if (this.minZoom !== undefined) {
+      layerOptions.minzoom = this.minZoom;
+    }
+    if (this.maxZoom !== undefined) {
+      layerOptions.maxzoom = this.maxZoom;
+    }
     map.addLayer(layerOptions, this.trueBefore);
     this.$emit('loaded');
   }

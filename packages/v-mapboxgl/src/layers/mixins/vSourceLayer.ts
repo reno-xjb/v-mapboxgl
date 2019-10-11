@@ -62,6 +62,13 @@ export default class VSourceLayer extends Mixins(VLayerMixin) {
     if (this.filter) {
       layerOptions.filter = this.filter;
     }
+    if (this.minZoom !== undefined) {
+      layerOptions.minzoom = this.minZoom;
+    }
+    if (this.maxZoom !== undefined) {
+      layerOptions.maxzoom = this.maxZoom;
+    }
     map.addLayer(layerOptions, this.trueBefore);
+    this.$emit('loaded');
   }
 }
