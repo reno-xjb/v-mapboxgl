@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.13](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.12...v-mapboxgl@0.1.13) (2019-10-17)
+
+
+### Bug Fixes
+
+* add missing minor options ([527b591](https://github.com/reno-xjb/v-mapboxgl/commit/527b591))
+* implement min and max zoom on layer ([604ac27](https://github.com/reno-xjb/v-mapboxgl/commit/604ac27))
+
+
+
+
+
 ## [0.1.12](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.11...v-mapboxgl@0.1.12) (2019-09-06)
 
 **Note:** Version bump only for package v-mapboxgl
