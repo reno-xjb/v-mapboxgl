@@ -55,7 +55,7 @@ export default class VMarker extends Vue {
   @Prop({ type: String, default: 'center' })
   private anchor!: Position;
   @Prop({ type: [Object, Array], default: () => [0, -15] })
-  private offset?: mapboxgl.PointLike;
+  private offset!: mapboxgl.PointLike;
   @Prop({ type: String, default: '#3FB1CE' })
   private color!: string;
   @Prop({ type: Boolean, default: false })
@@ -91,9 +91,16 @@ export default class VMarker extends Vue {
   }
 
   @Watch('coordinates')
-  private updateCoordinates() {
+  private onCoordinatesUpdate() {
     if (this.marker) {
       this.marker.setLngLat(this.coordinates);
+    }
+  }
+
+  @Watch('offset')
+  private onOffsetUpdate() {
+    if (this.marker) {
+      this.marker.setOffset(this.offset);
     }
   }
 
@@ -192,9 +199,6 @@ export default class VMarker extends Vue {
 
 <style>
 .marker {
-  /* background-size: 25px; */
-  /* width: 25px; */
-  /* height: 30px; */
   display: block;
   box-sizing: border-box;
   outline: none;

@@ -27,6 +27,23 @@ export default class VGeolocateControl extends Mixins(VControlMixin) {
   @Emit('geolocate')
   private emitPosition(data: Position) { return data; }
 
+  @Watch('positionOptions', { deep: true })
+  private onPositionOptionsUpdate() {
+    this.reinitControl();
+  }
+  @Watch('fitBoundOptions', { deep: true })
+  private onFitBoundOptionssUpdate() {
+    this.reinitControl();
+  }
+  @Watch('trackUserLocation')
+  private onTrackUserLocationUpdate() {
+    this.reinitControl();
+  }
+  @Watch('showUserLocation')
+  private onShowUserLocationUpdate() {
+    this.reinitControl();
+  }
+
   private created() {
     this.initControl();
   }
@@ -44,5 +61,11 @@ export default class VGeolocateControl extends Mixins(VControlMixin) {
       this.control.on('error', this.emitError);
       this.control.on('geolocate', this.emitPosition);
     }
+  }
+
+  private reinitControl() {
+    this.removeControl();
+    this.initControl();
+    this.addControl();
   }
 }

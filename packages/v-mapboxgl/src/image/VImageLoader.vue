@@ -32,6 +32,7 @@ export default class VImageLoader extends Vue {
           return;
         }
         map.addImage(id, image, properties.options);
+        this.$emit('loaded:image', { id, image });
         resolve(id);
       });
     });
@@ -51,6 +52,7 @@ export default class VImageLoader extends Vue {
       .then((ids: string[]) => {
         this.loadedImages = ids;
         this.loaded = true;
+        this.$emit('loaded');
       });
   }
 
@@ -64,7 +66,9 @@ export default class VImageLoader extends Vue {
     }
     for (const imageId of this.loadedImages) {
       map.removeImage(imageId);
+      this.$emit('removed:image', { id: imageId });
     }
+    this.$emit('removed');
   }
 }
 </script>

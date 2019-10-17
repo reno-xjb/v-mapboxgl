@@ -32,6 +32,7 @@ export default class VControlMixin extends Vue {
       const map = this.getMap();
       if (this.control && map) {
         map.addControl(this.control, this.position);
+        this.$emit('loaded', this.control);
       }
     }
   }
@@ -40,6 +41,7 @@ export default class VControlMixin extends Vue {
       const map = this.getMap();
       if (this.control && map) {
         map.removeControl(this.control);
+        this.$emit('removed');
       }
     }
   }
