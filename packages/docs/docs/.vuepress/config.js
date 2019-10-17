@@ -15,13 +15,37 @@ module.exports = {
     ],
     sidebar: {
       '/guide/': [
-        '',
         {
-          title: 'Components',   // required
+          title: 'Guide',
+          collapsable: false,
+          sidebarDepth: 1,
+          children:[
+            '',
+          ],
+        },
+        {
+          title: 'Components',
+          collapsable: false,
+          sidebarDepth: 1,
+          children:[
+            'components/map',
+            'components/controls',
+            'components/sources',
+            'components/layers',
+            'components/markers',
+            'components/wrappers',
+          ],
+        },
+        {
+          title: 'Plugins',   // required
           // path: '/plugins/',      // optional, which should be a absolute path.
           collapsable: false, // optional, defaults to true
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
+            'plugins/basic-control',
+            'plugins/menu-control',
+            'plugins/arrow-line-layer',
+            'plugins/cluster-layer',
           ],
         },
       ],
