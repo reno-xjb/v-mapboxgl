@@ -14,6 +14,7 @@ export default {
     if (this.$mapbox.ready) {
       return;
     }
+    await import('mapbox-gl/dist/mapbox-gl.css');
     await import('@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css');
     const VMapboxGL = await import('v-mapboxgl');
     const VMapboxGLArrowLineLayer = await import('@v-mapboxgl/plugin-arrow-line-layer');

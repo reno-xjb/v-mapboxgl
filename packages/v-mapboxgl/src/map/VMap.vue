@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts">
-import 'mapbox-gl/dist/mapbox-gl.css';
 import Vue from 'vue';
 import mapbox, * as mapboxgl from 'mapbox-gl';
 import { Component, Prop, Watch, Provide } from 'vue-property-decorator';
