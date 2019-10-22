@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.13...v-mapboxgl@1.0.0) (2019-10-22)
+
+
+### Bug Fixes
+
+* remove import of mapbox-gl css from v-mapboxgl ([8d0378d](https://github.com/reno-xjb/v-mapboxgl/commit/8d0378d))
+
+
+### BREAKING CHANGES
+
+* user code must now import mapbox-gl-js css itself
+
+
+
+
+
 ## [0.1.13](https://github.com/reno-xjb/v-mapboxgl/compare/v-mapboxgl@0.1.12...v-mapboxgl@0.1.13) (2019-10-17)
 
 

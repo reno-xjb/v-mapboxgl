@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/reno-xjb/v-mapboxgl/compare/docs@0.1.14...docs@1.0.0) (2019-10-22)
+
+
+### Bug Fixes
+
+* remove import of mapbox-gl css from v-mapboxgl ([8d0378d](https://github.com/reno-xjb/v-mapboxgl/commit/8d0378d))
+
+
+### Features
+
+* first implementation of mapbox gl Draw plugin ([dd2f801](https://github.com/reno-xjb/v-mapboxgl/commit/dd2f801))
+
+
+### BREAKING CHANGES
+
+* user code must now import mapbox-gl-js css itself
+
+
+
+
+
 ## [0.1.14](https://github.com/reno-xjb/v-mapboxgl/compare/docs@0.1.13...docs@0.1.14) (2019-10-17)
 
 **Note:** Version bump only for package docs

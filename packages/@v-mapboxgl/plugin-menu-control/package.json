@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/plugin-menu-control",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "scripts": {
     "lint": "vue-cli-service lint",
     "semantic-release": "semantic-release -e semantic-release-monorepo",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@types/mapbox-gl": "^0.51.6",
-    "@v-mapboxgl/plugin-basic-control": "^0.0.14",
+    "@v-mapboxgl/plugin-basic-control": "^0.0.15",
     "@v-mapboxgl/types": "^0.0.3",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0"
@@ -33,7 +33,7 @@
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
-    "v-mapboxgl": "^0.1.13",
+    "v-mapboxgl": "^1.0.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   },
