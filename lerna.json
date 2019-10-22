@@ -8,6 +8,7 @@
     "packages/@v-mapboxgl/plugin-arrow-line-layer",
     "packages/@v-mapboxgl/plugin-basic-control",
     "packages/@v-mapboxgl/plugin-cluster-layer",
+    "packages/@v-mapboxgl/plugin-draw",
     "packages/@v-mapboxgl/plugin-menu-control",
     "packages/v-mapboxgl",
     "packages/docs"
