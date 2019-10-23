@@ -4,9 +4,24 @@ import MapboxDraw, * as mapboxgldraw from '@mapbox/mapbox-gl-draw';
 import { Component, Mixins, Prop, Watch, Inject } from 'vue-property-decorator';
 import { VControlMixin } from 'v-mapboxgl';
 
+const drawEvents: { [eventName: string]: string } = {
+  'draw.create': 'draw:create',
+  'draw.delete': 'draw:delete',
+  'draw.combine': 'draw:combine',
+  'draw.uncombine': 'draw:uncombine',
+  'draw.update': 'draw:update',
+  'draw.selectionchange': 'draw:selectionchange',
+  'draw.modechange': 'draw:modechange',
+  'draw.render': 'draw:render',
+  'draw.actionable': 'draw:actionable',
+};
+
 @Component({})
 export default class VDraw extends Mixins(VControlMixin) {
   protected control?: MapboxDraw;
+
+  @Inject({ from: 'getMap', default: undefined })
+  protected getMap!: any;
 
   @Prop({ type: Boolean, default: true })
   private keybindings!: boolean;
@@ -33,6 +48,33 @@ export default class VDraw extends Mixins(VControlMixin) {
 
   private created() {
     this.initControl();
+    this.assignEvents();
+  }
+
+  private assignEvents() {
+    if (!this.control || !this.getMap) {
+      return;
+    }
+    const map = this.getMap();
+    if (!map) {
+      return;
+    }
+    for (const eventName of Object.keys(drawEvents)) {
+      map.on(eventName, (e: any) => this.$emit(drawEvents[eventName], { ...e, draw: this.control, map }));
+    }
+  }
+
+  private removeEvents() {
+    if (!this.control || !this.getMap) {
+      return;
+    }
+    const map = this.getMap();
+    if (!map) {
+      return;
+    }
+    for (const eventName of Object.keys(drawEvents)) {
+      map.off(eventName, (e: any) => this.$emit(drawEvents[eventName], { ...e, draw: this.control, map }));
+    }
   }
 
   private initControl() {
@@ -62,8 +104,10 @@ export default class VDraw extends Mixins(VControlMixin) {
   }
 
   private reinitControl() {
+    this.removeEvents();
     this.removeControl();
     this.initControl();
+    this.assignEvents();
     this.addControl();
   }
 }
