@@ -4,7 +4,7 @@ import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VNavigationControl extends Mixins(VControlMixin) {
-  protected control?: mapboxgl.NavigationControl;
+  protected control: mapboxgl.NavigationControl | null = null;
 
   @Prop({ type: Boolean, default: true })
   private showCompass!: boolean;

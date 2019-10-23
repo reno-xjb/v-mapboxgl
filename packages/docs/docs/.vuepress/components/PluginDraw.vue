@@ -7,6 +7,7 @@
   >
     <v-draw
       @draw:create="onFeatureCreation"
+      :feature-collection="featureCollection"
     />
   </v-map>
 </template>
@@ -15,11 +16,23 @@
 export default {
   data() {
     return {
+      featureCollection: {
+        type: 'FeatureCollection',
+        features: [{
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-119.8138027, 39.5296329],
+          },
+          properties: {},
+        }],
+      },
     };
   },
   methods: {
     onFeatureCreation({ features }) {
       alert(`Created features: ${JSON.stringify(features)}`);
+      this.featureCollection.features = [...this.featureCollection.features, ...features];
     },
   },
 };

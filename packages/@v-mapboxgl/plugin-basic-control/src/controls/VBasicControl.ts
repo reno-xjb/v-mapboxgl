@@ -8,7 +8,7 @@ import { ButtonStyle } from './mapbox/types';
 
 @Component({})
 export default class VBasicControl extends Mixins(VControlMixin) {
-  protected control?: BasicMapboxControl;
+  protected control: BasicMapboxControl | null = null;
 
   @Prop(String)
   private controlStyle?: ButtonStyle;

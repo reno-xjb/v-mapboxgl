@@ -4,7 +4,7 @@ import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VAttributionControl extends Mixins(VControlMixin) {
-  protected control?: mapboxgl.AttributionControl;
+  protected control: mapboxgl.AttributionControl | null = null;
 
   @Prop({ type: Boolean })
   private compact?: boolean;

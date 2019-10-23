@@ -4,7 +4,7 @@ import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VFullscreenControl extends Mixins(VControlMixin) {
-  protected control?: mapboxgl.FullscreenControl;
+  protected control: mapboxgl.FullscreenControl | null = null;
 
   private created() {
     this.initControl();

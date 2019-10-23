@@ -5,7 +5,7 @@ import { Corner } from '@v-mapboxgl/types';
 
 @Component({})
 export default class VControlMixin extends Vue {
-  protected control?: mapboxgl.Control | mapboxgl.IControl;
+  protected control: mapboxgl.Control | mapboxgl.IControl | null = null;
 
   @Inject({ from: 'getMap', default: undefined })
   protected getMap?: any;

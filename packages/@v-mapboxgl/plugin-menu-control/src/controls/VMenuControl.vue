@@ -48,7 +48,7 @@
     @Inject({ from: 'getMap', default: undefined })
     protected getMap?: any;
 
-    protected control?: BasicMapboxControl;
+    protected control: BasicMapboxControl | null = null;
 
     private menuOpen = false;
     private menuX = 0;

@@ -4,7 +4,7 @@ import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VGeolocateControl extends Mixins(VControlMixin) {
-  protected control?: mapboxgl.GeolocateControl;
+  protected control: mapboxgl.GeolocateControl | null = null;
 
   @Prop({ type: Object, default: () => ({
     enableHighAccuracy: false,

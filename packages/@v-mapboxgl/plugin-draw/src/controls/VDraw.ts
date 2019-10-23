@@ -1,4 +1,4 @@
-
+import geojson from 'geojson';
 import * as mapboxgl from 'mapbox-gl';
 import MapboxDraw, * as mapboxgldraw from '@mapbox/mapbox-gl-draw';
 import { Component, Mixins, Prop, Watch, Inject } from 'vue-property-decorator';
@@ -18,7 +18,7 @@ const drawEvents: { [eventName: string]: string } = {
 
 @Component({})
 export default class VDraw extends Mixins(VControlMixin) {
-  protected control?: MapboxDraw;
+  protected control: MapboxDraw | null = null;
 
   @Inject({ from: 'getMap', default: undefined })
   protected getMap!: any;
@@ -43,8 +43,52 @@ export default class VDraw extends Mixins(VControlMixin) {
   private modes?: mapboxgldraw.MapboxDrawModes;
   @Prop({ type: String, default: 'simple_select' })
   private defaultMode!: string;
+  @Prop({ type: Object })
+  private defaultModeOptions?: mapboxgldraw.MapboxDrawModeOptions;
   @Prop({ type: Boolean, default: false })
   private userProperties!: boolean;
+  @Prop({ type: Object })
+  private featureCollection?: geojson.FeatureCollection;
+
+  @Watch('defaultMode')
+  private onDefaultModeUpdate() {
+    this.changeMode();
+  }
+  @Watch('defaultModeOptions')
+  private onDefaultModeOptionsUpdate() {
+    this.changeMode();
+  }
+
+  private changeMode() {
+    if (!this.control) {
+      return;
+    }
+    if (!this.defaultModeOptions) {
+      this.control.changeMode(this.defaultMode);
+      return;
+    }
+    this.control.changeMode(this.defaultMode, this.defaultModeOptions);
+  }
+
+  @Watch('featureCollection', { deep: true })
+  private onFeatureCollectionUpdate() {
+    if (this.control && this.featureCollection) {
+      this.control.set(this.featureCollection);
+    }
+  }
+
+  @Watch('control', { immediate: true })
+  private onControlUpdate() {
+    if (!this.control) {
+      return;
+    }
+    if (this.featureCollection) {
+      this.control.set(this.featureCollection);
+    }
+    if (this.defaultModeOptions) {
+      this.control.changeMode(this.defaultMode, this.defaultModeOptions);
+    }
+  }
 
   private created() {
     this.initControl();

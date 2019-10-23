@@ -6,7 +6,7 @@ import VControlMixin from './mixins/vControl';
 
 @Component({})
 export default class VScaleControl extends Mixins(VControlMixin) {
-  protected control?: mapboxgl.ScaleControl;
+  protected control: mapboxgl.ScaleControl | null = null;
 
   @Prop({ type: Number, default: 100 })
   private maxWidth!: number;
