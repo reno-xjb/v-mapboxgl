@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "docs",
   "description": "docs of VMapboxGL",
   "scripts": {
@@ -32,13 +32,13 @@
   },
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.2",
-    "@v-mapboxgl/plugin-arrow-line-layer": "^0.0.3",
-    "@v-mapboxgl/plugin-basic-control": "^0.0.15",
-    "@v-mapboxgl/plugin-cluster-layer": "^0.0.3",
-    "@v-mapboxgl/plugin-draw": "^0.1.0",
-    "@v-mapboxgl/plugin-menu-control": "^0.0.15",
+    "@v-mapboxgl/plugin-arrow-line-layer": "^0.0.4",
+    "@v-mapboxgl/plugin-basic-control": "^0.0.16",
+    "@v-mapboxgl/plugin-cluster-layer": "^0.0.4",
+    "@v-mapboxgl/plugin-draw": "^0.1.1",
+    "@v-mapboxgl/plugin-menu-control": "^0.0.16",
     "mapbox-gl": "^1.3.0",
     "material-design-icons": "https://github.com/tanskann/material-design-icons#c710d368b0b5ce60e923b3d3d7e48637e75b84cc",
-    "v-mapboxgl": "^1.0.0"
+    "v-mapboxgl": "^1.0.1"
   }
 }

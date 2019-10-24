@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/reno-xjb/v-mapboxgl/compare/@v-mapboxgl/plugin-menu-control@0.0.15...@v-mapboxgl/plugin-menu-control@0.0.16) (2019-10-24)
+
+**Note:** Version bump only for package @v-mapboxgl/plugin-menu-control
+
+
+
+
+
 ## [0.0.15](https://github.com/reno-xjb/v-mapboxgl/compare/@v-mapboxgl/plugin-menu-control@0.0.14...@v-mapboxgl/plugin-menu-control@0.0.15) (2019-10-22)
 
 **Note:** Version bump only for package @v-mapboxgl/plugin-menu-control

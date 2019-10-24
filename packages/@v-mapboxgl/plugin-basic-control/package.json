@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/plugin-basic-control",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "scripts": {
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --name v-mapboxgl-plugin-basic-control --filename index ./src/index.ts && tsc --emitDeclarationOnly",
@@ -31,7 +31,7 @@
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
-    "v-mapboxgl": "^1.0.0",
+    "v-mapboxgl": "^1.0.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/plugin-draw",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "lint": "vue-cli-service lint",
     "semantic-release": "semantic-release -e semantic-release-monorepo",
@@ -35,7 +35,7 @@
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
-    "v-mapboxgl": "^1.0.0",
+    "v-mapboxgl": "^1.0.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.5.21"
   },
