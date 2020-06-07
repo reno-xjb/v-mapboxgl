@@ -2227,6 +2227,17 @@
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.14.0.tgz#8edfc5f8e6eae20eeed3ca0d02974ed4ee5e4efc"
   integrity sha512-Fv+0gYJzE/czLoRKq+gnXWr4yBpPM3tO3C8pDLFwqVKlMICQUq5OsxwwFZYDaVr7+L6mgNDp16iOcJHEz3J5RQ==
 
+"@v-mapboxgl/plugin-basic-control@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@v-mapboxgl/plugin-basic-control/-/plugin-basic-control-0.0.13.tgz#f0d956abd48fb865d52fc1a37c9fe8197f4ad443"
+  integrity sha512-drI0N5bUrJzhb8f0uzKMSbXFGqRODRPzpZq+vZI6dhWRkD+LyI6FrAp2LkvS0N96YcbqRe1DgQenrUcY0HLvMA==
+  dependencies:
+    "@types/mapbox-gl" "^0.51.6"
+    "@v-mapboxgl/types" "^0.0.3"
+    "@v-mapboxgl/utils" "^0.0.4"
+    vue-class-component "^7.0.2"
+    vue-property-decorator "^8.1.0"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"
@@ -15513,9 +15524,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 wgs84@0.0.0:
   version "0.0.0"
