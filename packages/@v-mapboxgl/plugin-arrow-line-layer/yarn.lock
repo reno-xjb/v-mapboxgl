@@ -1463,9 +1463,9 @@ acorn-walk@^6.1.1:
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
 
 acorn@^6.0.7, acorn@^6.1.1, acorn@^6.2.1:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.3.0.tgz#0087509119ffa4fc0a0041d1e93a417e68cb856e"
-  integrity sha512-/czfa8BwS88b9gWQVhc8eknunSA2DoJpJyTQkhheIf5E48u1N0R4q/YxxsAeqRrmK9TQ/uYfgLDfZo91UlANIA==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 acorn@^7.0.0:
   version "7.0.0"
@@ -10562,10 +10562,10 @@ uuid@^3.0.1, uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
   integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
-v-mapboxgl@^0.1.10:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/v-mapboxgl/-/v-mapboxgl-0.1.11.tgz#012c04d1434640e013759305796d4c334289ccd0"
-  integrity sha512-gBUugjJoblBZvjNF+3X+JcREzjVXt+JEBGe6N0pwY/Gxw/DSEgu8ZFhPQoSRbvpEYsil1hBqlLiFQJikb9HfsQ==
+v-mapboxgl@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/v-mapboxgl/-/v-mapboxgl-1.0.1.tgz#3b9ddf506dcd6d3d67a3038e0e14d6fdb68764d9"
+  integrity sha512-DkXwMrAHb6HtQ0tN66m5NPN/bXQiXv32a1VBeJvZlSyhtdwHSHZsgKq0rRM9G2/iR00qWXGUDF6v8T6VB/UpTA==
   dependencies:
     "@types/mapbox-gl" "^0.51.6"
     "@v-mapboxgl/types" "^0.0.3"
