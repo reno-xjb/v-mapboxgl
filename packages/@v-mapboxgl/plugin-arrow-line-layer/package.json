@@ -1,6 +1,6 @@
 {
   "name": "@v-mapboxgl/plugin-arrow-line-layer",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --name v-mapboxgl-plugin-arrow-line-layer --filename index ./src/index.ts && tsc --emitDeclarationOnly",

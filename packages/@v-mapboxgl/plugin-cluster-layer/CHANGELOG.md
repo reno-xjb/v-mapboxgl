@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/reno-xjb/v-mapboxgl/compare/@v-mapboxgl/plugin-cluster-layer@0.0.4...@v-mapboxgl/plugin-cluster-layer@0.0.5) (2020-10-12)
+
+**Note:** Version bump only for package @v-mapboxgl/plugin-cluster-layer
+
+
+
+
+
 ## [0.0.4](https://github.com/reno-xjb/v-mapboxgl/compare/@v-mapboxgl/plugin-cluster-layer@0.0.3...@v-mapboxgl/plugin-cluster-layer@0.0.4) (2019-10-24)
 
 **Note:** Version bump only for package @v-mapboxgl/plugin-cluster-layer
