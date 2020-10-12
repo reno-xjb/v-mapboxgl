@@ -4911,9 +4911,9 @@ https-browserify@^1.0.0:
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
 https-proxy-agent@^2.2.1:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.2.tgz#271ea8e90f836ac9f119daccd39c19ff7dfb0793"
-  integrity sha512-c8Ndjc9Bkpfx/vCJueCPy0jlP4ccCCSNDp8xwCZzPjKJUm+B+u9WX2x98Qx4n1PiMNTWo3D7KK5ifNV/yJyRzg==
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
+  integrity sha512-OmvfoQ53WLjtA9HeYP9RNrWMJzzAz1JGaSFr1nijg0PVR1JaD/xbJq1mdEIIlxGpXp9eSe/O2LgU9DJmTPd0Eg==
   dependencies:
     agent-base "^4.3.0"
     debug "^3.1.0"
@@ -10562,10 +10562,10 @@ uuid@^3.0.1, uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
   integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
-v-mapboxgl@^0.1.10:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/v-mapboxgl/-/v-mapboxgl-0.1.11.tgz#012c04d1434640e013759305796d4c334289ccd0"
-  integrity sha512-gBUugjJoblBZvjNF+3X+JcREzjVXt+JEBGe6N0pwY/Gxw/DSEgu8ZFhPQoSRbvpEYsil1hBqlLiFQJikb9HfsQ==
+v-mapboxgl@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/v-mapboxgl/-/v-mapboxgl-1.0.1.tgz#3b9ddf506dcd6d3d67a3038e0e14d6fdb68764d9"
+  integrity sha512-DkXwMrAHb6HtQ0tN66m5NPN/bXQiXv32a1VBeJvZlSyhtdwHSHZsgKq0rRM9G2/iR00qWXGUDF6v8T6VB/UpTA==
   dependencies:
     "@types/mapbox-gl" "^0.51.6"
     "@v-mapboxgl/types" "^0.0.3"
