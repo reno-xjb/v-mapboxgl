@@ -30,7 +30,7 @@
     "lint-staged": "^8.1.5",
     "mapbox-gl": "^0.54.0",
     "rollup-plugin-typescript2": "^0.22.0",
-    "semantic-release": "^15.13.18",
+    "semantic-release": "^17.2.3",
     "semantic-release-monorepo": "^6.1.1",
     "typescript": "^3.5.3",
     "v-mapboxgl": "^1.0.1",
