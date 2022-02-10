@@ -34,7 +34,7 @@
     "babel-preset-env": "^1.7.0",
     "lint-staged": "^8.1.5",
     "mapbox-gl": "^0.54.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "semantic-release": "^15.13.18",
     "semantic-release-monorepo": "^6.1.1",
